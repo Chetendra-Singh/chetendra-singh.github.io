@@ -3,7 +3,7 @@
 This repository contains my personal portfolio website built using HTML, CSS, and JavaScript.
 
 ## 🌐 Live Website
-https://chetendrasingh.github.io
+https://chetendra-singh.github.io
 
 ## 🛠️ Tech Stack
 - HTML
