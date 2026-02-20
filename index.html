@@ -1,47 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chetendra Singh | Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Chetendra Singh | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
     <h1>Chetendra Singh</h1>
-    <p>Engineering Student | Aspiring Software Engineer</p>
-  </header>
-
-  <section>
-    <h2>About Me</h2>
+    <h2>Software Engineer</h2>
     <p>
-      I am an engineering student passionate about technology, problem-solving,
-      and building real-world projects.
+      I design scalable backend systems and build clean,
+      production-ready applications focused on performance and maintainability.
     </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="primary">View Work</a>
+      <a href="Resume_Chetendra_Singh.pdf" download class="secondary">Download Resume</a>
+    </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>C / C++</li>
-      <li>Python</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Git & GitHub</li>
-    </ul>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Selected Work</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Taskora – Productivity Assistant</h3>
+        <p>
+          Flask-based backend integrating Google Calendar and Twilio APIs
+          for intelligent task automation and reminders.
+        </p>
+        <a href="https://github.com/Bhumikhandelwal28/Taskora-Smart-Daily-Productivity-Assistant" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>AniShop – E-commerce Backend</h3>
+        <p>
+          Designed authentication, product management, and database
+          architecture using PHP & MySQL.
+        </p>
+      </div>
+
+    </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <p>Coming soon…</p>
+  <!-- SKILLS -->
+  <section class="section">
+    <h2>Technical Stack</h2>
+
+    <div class="skills-grid">
+      <div>
+        <h4>Languages</h4>
+        <p>Python, C++, SQL, PHP</p>
+      </div>
+
+      <div>
+        <h4>Backend</h4>
+        <p>Flask, REST APIs</p>
+      </div>
+
+      <div>
+        <h4>Database</h4>
+        <p>MySQL, SQLite</p>
+      </div>
+
+      <div>
+        <h4>Core</h4>
+        <p>Data Structures & Algorithms, OOPS, DBMS</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: your-email@gmail.com</p>
-    <p>
-      <a href="https://github.com/Chetendra-Singh" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/chetendra-singh-040936333/" target="_blank">LinkedIn</a>
-    </p>
+  <!-- CONTACT -->
+  <section class="section contact">
+    <h2>Let's Connect</h2>
+
+    <div class="contact-card">
+      
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <span>Email</span>
+          <a href="mailto:chetendra.singh.tech@gmail.com">
+            chetendra.singh.tech@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <span>Phone</span>
+          <a href="tel:+918118824525">
+            +91 81188 24525
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <div>
+          <span>GitHub</span>
+          <a href="https://github.com/Chetendra-Singh" target="_blank">
+            github.com/Chetendra-Singh
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <div>
+          <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/in/chetendra-singh-040936333/" target="_blank">
+            linkedin.com/in/chetendra-singh-040936333
+          </a>
+        </div>
+      </div>
+
+    </div>
   </section>
+
+  <footer>
+    © 2026 Chetendra Singh
+  </footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    const sections = document.querySelectorAll(".section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
 </body>
 </html>
