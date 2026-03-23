@@ -187,3 +187,106 @@ footer {
     transform: translateY(0);
   }
 }
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 80px 8%;
+  }
+
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;
+    padding: 80px 8%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 70px 8%;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+}
