@@ -4,159 +4,491 @@
   <meta charset="UTF-8">
   <title>Chetendra Singh | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Chetendra Singh</h1>
-    <h2>Software Engineer</h2>
-    <p>
-      I design scalable backend systems and build clean,
-      production-ready applications focused on performance and maintainability.
-    </p>
+  <div class="scanlines" aria-hidden="true"></div>
+  <canvas id="matrix-bg" aria-hidden="true"></canvas>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="primary">View Work</a>
-      <a href="Resume_Chetendra_Singh.pdf" download class="secondary">Download Resume</a>
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-logo">
+      <span class="bracket">[</span>CS<span class="bracket">]</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#learning">learning</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="dot"></span> available for internship &amp; full-time
+      </div>
+
+      <h1 class="hero-name">Chetendra<br><span class="accent">Singh</span></h1>
+
+      <div class="hero-role">
+        <span class="prefix">// </span>
+        <span id="typed-text"></span>
+        <span class="cursor">_</span>
+      </div>
+
+      <p class="hero-bio">
+        Backend developer, ML tinkerer &amp; DSA enthusiast from Jaipur.
+        I build things that work — then make them better.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <i class="fas fa-terminal"></i> view work
+        </a>
+        <a href="Chetendra_Singh.pdf" download class="btn-outline">
+          <i class="fas fa-download"></i> resume.pdf
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">projects shipped</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">internships</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">8.1</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">96%</span>
+          <span class="stat-label">ML accuracy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-decoration" aria-hidden="true">
+      <div class="code-block">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">chetendra.py</span>
+        </div>
+        <pre class="code-body"><span class="kw">class</span> <span class="cls">Chetendra</span>:
+  cgpa    = <span class="num">8.1</span>
+  college = <span class="str">"SKIT, Jaipur"</span>
+  interns = [<span class="str">"Coplur"</span>, <span class="str">"Kistechno"</span>]
+  stack   = [
+    <span class="str">"Python"</span>, <span class="str">"Flask"</span>,
+    <span class="str">"ML"</span>, <span class="str">"C++"</span>, <span class="str">"SQL"</span>,
+  ]
+  status  = <span class="str">"open to work 🚀"</span>
+
+  <span class="kw">def</span> <span class="fn">hire</span>(self) -> <span class="cls">bool</span>:
+    <span class="kw">return True</span>
+</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-num">01</span>
+        <span class="label-line"></span>
+        <span class="label-text">about.md</span>
+      </div>
+      <h2 class="section-title">Who I Am</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a final-year B.Tech CSE student at <strong>SKIT, Jaipur</strong> with a CGPA of <strong>8.1</strong>. I build backend systems, train ML models, and enjoy competitive programming on LeetCode.
+          </p>
+          <p>
+            I've completed two internships — one in <em>data engineering</em> and one in <em>web development</em> — and shipped projects that are actually deployed and live. OncoScan, my breast cancer diagnostic tool, runs in production on Render with 96–97% accuracy.
+          </p>
+          <p>
+            Honest take: I'm still growing. Sometimes I use AI to get unstuck on tech I haven't fully learned yet — and then I go learn it properly. That curiosity is what drives me forward.
+          </p>
+          <p>
+            I'm actively looking for an <strong>internship or entry-level role</strong> where I can contribute, ship real things, and level up fast.
+          </p>
+          <div class="about-tags">
+            <span class="tag"># backend dev</span>
+            <span class="tag"># ml enthusiast</span>
+            <span class="tag"># dsa grinder</span>
+            <span class="tag"># data engineering</span>
+            <span class="tag"># forever learning</span>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-info">
+              <h4>B.Tech — Computer Science &amp; Engineering</h4>
+              <p>Swami Keshvanand Institute of Technology, Jaipur</p>
+              <span class="edu-year">2023 – 2027 &nbsp;·&nbsp; CGPA: 8.1 / 10.0</span>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fas fa-school"></i></div>
+            <div class="edu-info">
+              <h4>Class XII — CBSE</h4>
+              <p>A.V.M Convent School, Dholpur</p>
+              <span class="edu-year">2022 &nbsp;·&nbsp; 85.40%</span>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon"><i class="fas fa-school"></i></div>
+            <div class="edu-info">
+              <h4>Class X — RBSE</h4>
+              <p>Emmanuel Mission Senior Secondary School, Dholpur</p>
+              <span class="edu-year">2020 &nbsp;·&nbsp; 90.17%</span>
+            </div>
+          </div>
+
+          <div class="cert-row">
+            <div class="cert-badge">
+              <i class="fas fa-certificate"></i>
+              <span>Databricks Fundamentals</span>
+            </div>
+            <div class="cert-badge">
+              <i class="fas fa-robot"></i>
+              <span>HP LIFE – AI for Beginners</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-num">02</span>
+        <span class="label-line"></span>
+        <span class="label-text">experience.log</span>
+      </div>
+      <h2 class="section-title">Internship Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div>
+                <h3>Python &amp; Data Analysis Intern</h3>
+                <span class="timeline-company">Coplur Technologies</span>
+              </div>
+              <span class="timeline-date">Jun – Jul 2025</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Processed and transformed <strong>4–5 structured datasets</strong> using Databricks and PySpark, enabling cleaner and faster analytical workflows.</li>
+              <li>Architected <strong>multi-step data processing pipelines</strong> using distributed computing to handle complex transformations efficiently.</li>
+              <li>Automated repetitive data tasks to streamline execution and improve data quality across multiple pipeline stages.</li>
+            </ul>
+            <div class="timeline-stack">
+              <span>Python</span><span>PySpark</span><span>Databricks</span><span>Data Pipelines</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div>
+                <h3>Web Development Intern</h3>
+                <span class="timeline-company">Kistechnosoftware Industries</span>
+              </div>
+              <span class="timeline-date">Jun – Jul 2024</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Contributed to backend development across <strong>3–4 web application pages</strong> using PHP and MySQL.</li>
+              <li>Managed server-side logic and database interactions, collaborating in debugging to improve system stability.</li>
+              <li>Gained end-to-end experience in server-side scripting, database design, and deployment.</li>
+            </ul>
+            <div class="timeline-stack">
+              <span>PHP</span><span>MySQL</span><span>Server-side scripting</span><span>DB Design</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
-    <h2>Selected Work</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>Taskora – Productivity Assistant</h3>
-        <p>
-          Flask-based backend integrating Google Calendar and Twilio APIs
-          for intelligent task automation and reminders.
-        </p>
-        <a href="https://github.com/Bhumikhandelwal28/Taskora-Smart-Daily-Productivity-Assistant" target="_blank">
-          <i class="fab fa-github"></i> View on GitHub
-        </a>
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-num">03</span>
+        <span class="label-line"></span>
+        <span class="label-text">projects.json</span>
       </div>
+      <h2 class="section-title">Selected Work</h2>
 
-      <div class="card">
-        <h3>AniShop – E-commerce Backend</h3>
-        <p>
-          Designed authentication, product management, and database
-          architecture using PHP & MySQL.
-        </p>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-microscope"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Chetendra-Singh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" title="Live Demo" class="live-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-badge">featured · live in production</div>
+          <h3>OncoScan</h3>
+          <p class="project-sub">Breast Cancer Diagnostic System</p>
+          <p class="project-desc">
+            Full-stack ML web app predicting breast cancer using an ensemble of 3 models — SVM, Random Forest &amp; Logistic Regression — trained on 569 samples with <strong>96–97% accuracy</strong>. Features secure auth with SHA-256, SQLite-backed patient history, automated PDF parsing with pdfplumber, and is deployed live on Render.
+          </p>
+          <div class="project-accuracy">
+            <div class="accuracy-bar">
+              <div class="accuracy-fill" style="width: 97%"></div>
+            </div>
+            <span class="accuracy-label">97% accuracy</span>
+          </div>
+          <div class="project-stack">
+            <span>Python</span><span>Flask</span><span>Scikit-learn</span><span>SQLite</span><span>pdfplumber</span><span>Render</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Bhumikhandelwal28/Taskora-Smart-Daily-Productivity-Assistant" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Taskora</h3>
+          <p class="project-sub">Smart Productivity Assistant</p>
+          <p class="project-desc">
+            Collaborated in a team of 3 to build a full-stack productivity app with Flask &amp; SQLite. Features CRUD task management, multi-table relational schema, RESTful routing, and a fully responsive UI.
+          </p>
+          <div class="project-stack">
+            <span>Python</span><span>Flask</span><span>SQLite</span><span>REST APIs</span><span>HTML/CSS/JS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Chetendra-Singh/AniShop" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>AniShop</h3>
+          <p class="project-sub">E-commerce Backend</p>
+          <p class="project-desc">
+            Full e-commerce backend with user authentication, product management, cart system, and clean relational database architecture. Focused on server-side logic and scalable DB schema design.
+          </p>
+          <div class="project-stack">
+            <span>PHP</span><span>MySQL</span><span>Auth System</span><span>HTML/CSS</span>
+          </div>
+        </div>
+
       </div>
-
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="section">
-    <h2>Technical Stack</h2>
-
-    <div class="skills-grid">
-      <div>
-        <h4>Languages</h4>
-        <p>Python, C++, SQL, PHP</p>
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-num">04</span>
+        <span class="label-line"></span>
+        <span class="label-text">skills.json</span>
       </div>
+      <h2 class="section-title">Technical Stack</h2>
 
-      <div>
-        <h4>Backend</h4>
-        <p>Flask, REST APIs</p>
+      <div class="skills-container">
+        <div class="skill-group">
+          <h4 class="skill-group-title"><span class="accent-bracket">&lt;</span> Languages <span class="accent-bracket">/&gt;</span></h4>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+            <div class="skill-tag"><i class="fas fa-code"></i> C</div>
+            <div class="skill-tag"><i class="fab fa-php"></i> PHP</div>
+            <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title"><span class="accent-bracket">&lt;</span> Frontend <span class="accent-bracket">/&gt;</span></h4>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title"><span class="accent-bracket">&lt;</span> Backend &amp; DB <span class="accent-bracket">/&gt;</span></h4>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fas fa-flask"></i> Flask</div>
+            <div class="skill-tag"><i class="fas fa-plug"></i> REST APIs</div>
+            <div class="skill-tag"><i class="fas fa-server"></i> MySQL</div>
+            <div class="skill-tag"><i class="fas fa-database"></i> SQLite</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title"><span class="accent-bracket">&lt;</span> ML &amp; Data <span class="accent-bracket">/&gt;</span></h4>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fas fa-brain"></i> Scikit-learn</div>
+            <div class="skill-tag"><i class="fas fa-table"></i> NumPy</div>
+            <div class="skill-tag"><i class="fas fa-table"></i> Pandas</div>
+            <div class="skill-tag"><i class="fas fa-fire"></i> PySpark</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title"><span class="accent-bracket">&lt;</span> Tools <span class="accent-bracket">/&gt;</span></h4>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
+            <div class="skill-tag"><i class="fas fa-cloud"></i> Databricks</div>
+            <div class="skill-tag"><i class="fas fa-rocket"></i> Render</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title"><span class="accent-bracket">&lt;</span> CS Core <span class="accent-bracket">/&gt;</span></h4>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fas fa-project-diagram"></i> DSA</div>
+            <div class="skill-tag"><i class="fas fa-cube"></i> OOPs</div>
+            <div class="skill-tag"><i class="fas fa-table"></i> DBMS</div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <h4>Database</h4>
-        <p>MySQL, SQLite</p>
+  <!-- CURRENTLY LEARNING -->
+  <section id="learning" class="section">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-num">05</span>
+        <span class="label-line"></span>
+        <span class="label-text">learning.log</span>
       </div>
+      <h2 class="section-title">Currently Learning</h2>
+      <p class="section-sub">Growth is the goal. Here's what I'm actively exploring right now.</p>
 
-      <div>
-        <h4>Core</h4>
-        <p>Data Structures & Algorithms, OOPS, DBMS</p>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <div class="learning-status in-progress">in progress</div>
+          <i class="fab fa-react learning-icon"></i>
+          <h4>React.js</h4>
+          <p>Learning modern frontend to pair with my backend skills</p>
+        </div>
+        <div class="learning-card">
+          <div class="learning-status in-progress">in progress</div>
+          <i class="fab fa-docker learning-icon"></i>
+          <h4>Docker</h4>
+          <p>Containerizing apps for cleaner, production-ready deployments</p>
+        </div>
+        <div class="learning-card">
+          <div class="learning-status exploring">exploring</div>
+          <i class="fas fa-network-wired learning-icon"></i>
+          <h4>System Design</h4>
+          <p>Understanding how large-scale distributed systems are built</p>
+        </div>
+        <div class="learning-card">
+          <div class="learning-status exploring">exploring</div>
+          <i class="fas fa-robot learning-icon"></i>
+          <h4>Deep Learning</h4>
+          <p>Going deeper into neural networks to extend ML projects</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section contact">
-    <h2>Let's Connect</h2>
-
-    <div class="contact-card">
-      
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <div>
-          <span>Email</span>
-          <a href="mailto:chetendra.singh.tech@gmail.com">
-            chetendra.singh.tech@gmail.com
-          </a>
-        </div>
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-num">06</span>
+        <span class="label-line"></span>
+        <span class="label-text">contact.sh</span>
       </div>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">
+        I'm actively looking for internships and opportunities. I respond fast — let's talk.
+      </p>
 
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <div>
-          <span>Phone</span>
-          <a href="tel:+918118824525">
-            +91 81188 24525
-          </a>
-        </div>
+      <div class="contact-grid">
+        <a href="mailto:chetendra.singh.tech@gmail.com" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">email</span>
+            <span class="contact-val">chetendra.singh.tech@gmail.com</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a href="tel:+918118824525" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">phone</span>
+            <span class="contact-val">+91 81188 24525</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a href="https://github.com/Chetendra-Singh" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">github</span>
+            <span class="contact-val">github.com/Chetendra-Singh</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/chetendra-singh-040936333/" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">linkedin</span>
+            <span class="contact-val">in/chetendra-singh-040936333</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
       </div>
-
-      <div class="contact-item">
-        <i class="fab fa-github"></i>
-        <div>
-          <span>GitHub</span>
-          <a href="https://github.com/Chetendra-Singh" target="_blank">
-            github.com/Chetendra-Singh
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-linkedin"></i>
-        <div>
-          <span>LinkedIn</span>
-          <a href="https://www.linkedin.com/in/chetendra-singh-040936333/" target="_blank">
-            linkedin.com/in/chetendra-singh-040936333
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <footer>
-    © 2026 Chetendra Singh
+    <div class="footer-inner">
+      <span class="footer-text">
+        <span class="accent">// </span> built by Chetendra Singh &nbsp;·&nbsp; 2026
+      </span>
+      <span class="footer-right">
+        <span class="blink-dot"></span> open to work
+      </span>
+    </div>
   </footer>
 
-  <!-- Scroll Animation -->
-  <script>
-    const sections = document.querySelectorAll(".section");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.15 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
